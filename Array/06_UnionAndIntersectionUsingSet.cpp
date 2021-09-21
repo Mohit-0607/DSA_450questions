@@ -16,7 +16,7 @@ void unionof(int a[], int b[], int n, int m){
 }
 
 void intersectionof(int a[], int b[], int n, int m){
-    set<int> inter,ans;
+    set<int> inter;
     for(int i=0;i<n;i++){
         inter.insert(a[i]);
     }
