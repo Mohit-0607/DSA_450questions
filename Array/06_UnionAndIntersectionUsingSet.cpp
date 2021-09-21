@@ -15,6 +15,20 @@ void unionof(int a[], int b[], int n, int m){
     cout<<endl;
 }
 
+void intersectionof(int a[], int b[], int n, int m){
+    set<int> inter,ans;
+    for(int i=0;i<n;i++){
+        inter.insert(a[i]);
+    }
+    for(int i=0;i<m;i++){
+        if(inter.find(b[i]) != inter.end()){
+            cout<<b[i]<<" ";
+            inter.erase(b[i]);
+        }
+    }
+    cout<<endl;
+}
+
 int main() {
     int n,m;
     cin>>n>>m;
@@ -24,5 +38,6 @@ int main() {
     for(int i=0;i<m;i++)
         cin>>b[i];
     unionof(a,b,n,m);
+    intersectionof(a,b,n,m);
 	return 0;
 }
